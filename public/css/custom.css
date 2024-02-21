@@ -1,0 +1,262 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+
+#page-content {
+    display: none;
+}
+
+.filter-gen form > .row:not(:first-child) {
+    margin-top: 25px !important;
+}
+
+.dt-buttons .btn:last-of-type {
+    border-top-right-radius: .15rem !important;
+    border-bottom-right-radius: .15rem !important;
+}
+
+.row.h-100 {
+    height: 100%;
+}
+
+.row.h-100 .card {
+    height: calc(100% - 1.5rem);
+}
+
+.threshold-box {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: .75rem !important;
+}
+
+.font-1-rem {
+    font-size: 1rem;
+}
+
+.font-2-rem {
+    font-size: 2rem;
+}
+
+.font-3-rem {
+    font-size: 3rem;
+}
+
+.font-4-rem {
+    font-size: 4rem;
+}
+
+.responsive-big-text {
+    font-size: calc(0.3rem + (2vw + 2.5vh));
+    white-space: nowrap;
+}
+
+.responsive-medium-text {
+    font-size: calc(0.1rem + 2vw);
+    white-space: nowrap;
+}
+
+.responsive-h3 {
+    font-size: calc(0.1rem + (.6vw + .6vh));
+    white-space: nowrap;
+}
+
+li.disabled {
+    display: none;
+}
+
+.right-bar {
+    width: 260px !important;
+}
+
+.bg-soft-success,
+.bg-soft-warning,
+.bg-soft-danger,
+.bg-soft-info {
+    --bs-table-accent-bg: none !important;
+}
+
+.blink-danger,
+.blink-warning {
+    --bs-table-accent-bg: none !important;
+}
+
+.blink-danger {
+    animation: blinkRed 0.5s;
+    font-weight: bold;
+    animation-timing-function: ease;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: initial;
+    animation-play-state: initial;
+}
+
+.blink-warning {
+    animation: blinkYellow 0.5s;
+    font-weight: bold;
+    animation-timing-function: ease;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: initial;
+    animation-play-state: initial;
+}
+
+@keyframes blinkYellow {
+    0% {
+        background-color: rgba(247,184,75, 0.65);
+    }
+
+    33% {
+        background-color: rgba(247,184,75, 0.45);
+    }
+
+    66% {
+        background-color: rgba(247,184,75, 0.25);
+    }
+
+    100% {
+        background-color: rgba(247,184,75, 0);
+    }
+}
+
+@keyframes blinkRed {
+    0% {
+        background-color: rgba(241,85,108, 0.65);
+    }
+
+    33% {
+        background-color: rgba(241,85,108, 0.45);
+    }
+
+    66% {
+        background-color: rgba(241,85,108, 0.25);
+    }
+
+    100% {
+        background-color: rgba(241,85,108, 0);
+    }
+}
+
+#notification-container {
+    max-height: 201px;
+}
+
+#notification-container .notify-item:hover,
+#notification-container .notify-item:focus {
+    cursor: default !important;
+}
+
+#toast-container {
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    top: 100px;
+}
+
+.color-inherit {
+    color: inherit !important;
+}
+
+.threshold-spinner.spinner-16 {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.threshold-spinner.spinner-19 {
+    width: 19px !important;
+    height: 19px !important;
+}
+
+.threshold-spinner.spinner-22 {
+    width: 22px !important;
+    height: 22px !important;
+}
+
+.threshold-spinner.spinner-28 {
+    width: 22px !important;
+    height: 22px !important;
+}
+
+.threshold-spinner.spinner-39 {
+    width: 39px !important;
+    height: 39px !important;
+}
+
+.letter-spacing-2px {
+    letter-spacing: 2px;
+}
+
+.phone-dropdown {
+    width: 200px !important;
+    padding: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.phone-input {
+    border-top-width: 0 !important;
+    border-right-width: 0 !important;
+    border-bottom-width: 1px !important;
+    border-left-width: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+.phone-pause {
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.phone-keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+}
+
+.phone-keyboard-button {
+    border-radius: 50% !important;
+    width: 45px;
+    height: 45px;
+}
+
+#agent-status-description > div {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+#agent-status-description > div > span {
+    display: inline-block;
+    padding-left: 100%;
+    padding-right: 50px;
+    animation: marquee 5s linear infinite;
+}
+
+#agent-status-description > div > span.mirror {
+    animation-delay: 2.5s;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+.modal-backdrop {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.custom-dropdown{
+    margin-top:-20px!important;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3)!important;
+}
