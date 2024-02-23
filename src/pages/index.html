@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; img-src 'self' data:; default-src 'self' http://121.0.0:3000/">
     <title>MeetaOne</title>
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
     <!-- end Icons -->
-
-    <!-- Scripts -->
-    <script type="text/javascript" src="../../main.js"></script>
 
     <!-- Vendor js -->
     <script src="../../public/js/vendor.min.js.download"></script>
@@ -53,19 +51,18 @@
 </head>
 
 <body>
-    <div>
-        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog m-0" style="width: 335px; position: absolute; right: 30px; bottom: 90px; ">
+            <div class="modal-content">
                 <div class="d-flex justify-content-end align-items-center m-2">
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <!-- section phone -->
                     <section id="section-phone">
-                        <img src="../images/logo-dark.png" alt="logo" class="d-flex justify-content-center align-items-center" style="width: 135px; margin: 5px;">
+                        <!-- <img src="../images/logo-dark.png" alt="logo" class="d-flex justify-content-center align-items-center" style="width: 135px; margin: 5px;"> -->
                         
-                        <div id="agent-status" style="min-height: 32px; margin-top: 10px;" class="d-flex align-items-center badge rounded-pill py-1 px-2 mb-1 font-15 w-100 text-uppercase badge-soft-secondary">
+                        <div id="agent-status" style="min-height: 32px;" class="d-flex align-items-center badge rounded-pill py-1 px-2 mb-1 font-15 w-100 text-uppercase badge-soft-secondary position-relative">
                             <i style="display: none;" class="agent-icon error text-danger mdi mdi-alert"></i>
                             <i style="display: none;" class="agent-icon warning text-warning mdi mdi-alert"></i>
                             <i style="" class="agent-icon pause text-secondary mdi mdi-coffee"></i>
@@ -75,7 +72,7 @@
                             <i style="display: none;" class="agent-icon outgoing mdi mdi-phone-outgoing-outline"></i>
                             <span id="agent-status-timer" class="font-12 ms-1">00:01:00</span>
     
-                            <div class="align-items-center d-flex px-2 w-100" id="agent-status-description">
+                            <div class="align-items-center d-flex px-2 w-100 position-relative" id="agent-status-description">
                                 <div><span>Ativo / Indisponivel</span></div>
                                 <div><span class="mirror">Ativo / Indisponivel</span></div>
                             </div>
@@ -301,12 +298,14 @@
                     </section>
                     <!-- end section phone -->
                 </div>
-              </div>
             </div>
         </div>
-        <a data-bs-toggle="modal" id="button-modal" href="#exampleModalToggle" role="button">
-            <img src="../images/logo-min-dark.png" alt="logo" class="avatar-lg img-thumbnail rounded-circle me-2" style="position: absolute; right: 30px; bottom: 90px;">
-        </a>
     </div>
+    <a data-bs-toggle="modal" id="button-modal" href="#exampleModalToggle" role="button">
+        <img src="../images/logo-min-dark.png" alt="logo" class="avatar-lg img-thumbnail rounded-circle me-2" style="position: absolute; right: 30px; bottom: 90px;">
+    </a>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../main.js"></script>
 </body>
 </html>

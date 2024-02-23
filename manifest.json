@@ -24,7 +24,7 @@
     "content_scripts": [
       {
         "js": [
-          "./main.js"
+          "src/main.js"
         ],
         "matches": ["https://meetaone.com.br/*"]
       }
