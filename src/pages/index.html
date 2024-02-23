@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
     <!-- end Icons -->
 
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../main.js"></script>
+
     <!-- Vendor js -->
     <script src="../../public/js/vendor.min.js.download"></script>
     <script src="../../public/js/sweetalert2.all.min.js.download"></script>
@@ -47,19 +50,10 @@
     <link href="../../public/css/bootstrap-saas-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" disabled="disabled">
     <link href="../../public/css/app-saas-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" disabled="disabled">
     <!-- end App css -->
-
-    <style>
-        .extension-content {
-          position: absolute;
-          right: 30px;
-          bottom: 60px;
-          z-index: 9999;
-        }
-      </style>
 </head>
 
 <body>
-    <div class="extension-content">
+    <div>
         <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
@@ -67,70 +61,6 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- section login -->
-                    <section id="section-login">
-                        <div class="auth-fluid mt-2">
-                            <!--Auth fluid left content -->
-                            <div class="auth-fluid-form-box">
-                                <div class="align-items-center d-flex h-100">
-                                    <div class="card-body">
-    
-                                        <!-- Logo -->
-                                        <div class="auth-brand text-center text-lg-start">
-                                            <div class="auth-logo">
-                                            <img src="../images/logo-dark.png" alt="logo" class="d-flex justify-content-center align-items-center" style="width: 150px;">
-                                            </div>
-                                        </div>
-    
-                                        <span id="validate-error"></span>
-    
-                                        <!-- title-->
-                                        <h4 class="mt-0">Login</h4>
-                                        <p class="text-muted mb-4">Insira seu login/email e senha para usar a extensão.</p>
-    
-                                        <!-- form -->
-                                        <form id="login-meetaone-form" method="POST" action="#">
-                            
-                                            <div class="mb-2">
-                                                <label for="email" class="form-label">Login/Email</label>
-                                                <input id="email" class="form-control" type="text" name="email" value="jonh.joe@meeta.com.br" required autofocus placeholder="Enter your login or email">
-                                                <span id="validate-error-email"></span>
-                                            </div>
-                                            <div class="mb-2">
-                                                <!-- @if (Route::has('password.request'))
-                                                    <a href="{{ route('password.request') }}" class="text-muted float-end"><small>{{ __('Forgot your password?') }}</small></a>
-                                                @endif -->
-                                                <label for="password" class="form-label">Senha</label>
-                                                <div class="input-group input-group-merge">
-                                                    <input id="password" class="form-control" type="password" name="password" value="12345" required autocomplete="current-password" placeholder="Enter your password" />
-                                                    <div class="input-group-text" id="togglePassword">
-                                                        <i id="toggleIcon" class="mdi mdi-eye-outline"></i>
-                                                    </div>
-                                                </div>
-                                                <span id="validate-error-password"></span>
-                                            </div>
-    
-                                            <!-- <div class="mb-3">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="remember_me">
-                                                    <label class="form-check-label" for="remember_me">
-                                                        keep logged in
-                                                    </label>
-                                                </div>
-                                            </div> -->
-                                            <div class="d-grid text-center">
-                                                <button class="btn btn-primary button-submit" type="submit">Acessar</button>
-                                            </div>
-                                        </form>
-                                        <!-- end form-->
-                                    </div> <!-- end .card-body -->
-                                </div> <!-- end .align-items-center.d-flex.h-100-->
-                            </div>
-                            <!-- end auth-fluid-form-box-->
-                        </div>
-                    </section>
-                    <!-- end section login -->
-    
                     <!-- section phone -->
                     <section id="section-phone">
                         <img src="../images/logo-dark.png" alt="logo" class="d-flex justify-content-center align-items-center" style="width: 135px; margin: 5px;">
@@ -374,13 +304,9 @@
               </div>
             </div>
         </div>
-        <a data-bs-toggle="modal" href="#exampleModalToggle" role="button">
-            <img src="../images/icon48.png" alt="logo">
+        <a data-bs-toggle="modal" id="button-modal" href="#exampleModalToggle" role="button">
+            <img src="../images/logo-min-dark.png" alt="logo" class="avatar-lg img-thumbnail rounded-circle me-2" style="position: absolute; right: 30px; bottom: 90px;">
         </a>
     </div>
-
-    <!-- Scripts -->
-    <script type="text/javascript" src="../utils/index.js"></script>
-    <script type="text/javascript" src="../main.js"></script>
 </body>
 </html>

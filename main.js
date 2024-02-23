@@ -1,5 +1,3 @@
-// Open Modal
-
 // Função para discar no telefone
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".phone-keyboard-button");
