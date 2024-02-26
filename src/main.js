@@ -1,7 +1,9 @@
-// Função para discar no telefone
-document.addEventListener("DOMContentLoaded", () => {
+// main.js
+window.onload = function () {
+  // Função para discar no telefone
   const buttons = document.querySelectorAll(".phone-keyboard-button");
   const input = document.getElementById("agent-call-number");
+  console.log("Main foi injetado!");
 
   if (!input) {
     console.error("Campo de entrada não encontrado.");
@@ -21,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
+};
 
 // Validação de usuário e aplica a lógica de render
 // document.addEventListener("DOMContentLoaded", function () {
