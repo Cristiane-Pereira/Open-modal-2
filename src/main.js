@@ -1,29 +1,31 @@
 // main.js
-window.onload = function () {
-  // Função para discar no telefone
-  const buttons = document.querySelectorAll(".phone-keyboard-button");
-  const input = document.getElementById("agent-call-number");
-  console.log("Main foi injetado!");
+alert("Testando....")
 
-  if (!input) {
-    console.error("Campo de entrada não encontrado.");
-    return;
-  }
+document.addEventListener("DOMContentLoaded", function () { 
+    const buttons = document.querySelectorAll(".phone-keyboard-button");
+    const input = document.getElementById("agent-call-number");
+    console.log("Main foi injetado!");
+    
+    if (!input) {
+      console.error("Campo de entrada não encontrado.");
+      return;
+    }
 
-  if (buttons.length === 0) {
-    console.error("Nenhum botão encontrado.");
-    return;
-  }
+    if (buttons.length === 0) {
+      console.error("Nenhum botão encontrado.");
+      return;
+    }
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const character = button.getAttribute("data-character");
-      if (character) {
-        input.value += character;
-      }
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const character = button.getAttribute("data-character");
+        if (character) {
+          input.value += character;
+        }
+      });
     });
-  });
-};
+  })
+
 
 // Validação de usuário e aplica a lógica de render
 // document.addEventListener("DOMContentLoaded", function () {
@@ -72,21 +74,21 @@ window.onload = function () {
 // });
 
 // Oculta e mostra password
-document.addEventListener("DOMContentLoaded", function () {
-   const togglePassword = document.getElementById("togglePassword");
-   const passwordField = document.getElementById("password");
+// document.addEventListener("DOMContentLoaded", function () {
+//    const togglePassword = document.getElementById("togglePassword");
+//    const passwordField = document.getElementById("password");
 
-   // Adiciona um evento de clique ao ícone do olho
-   togglePassword.addEventListener("click", function () {
-     // Alterna entre tipo de campo de senha e ícone do olho
-     const type =
-       passwordField.getAttribute("type") === "password" ? "text" : "password";
-     passwordField.setAttribute("type", type);
+//    // Adiciona um evento de clique ao ícone do olho
+//    togglePassword.addEventListener("click", function () {
+//      // Alterna entre tipo de campo de senha e ícone do olho
+//      const type =
+//        passwordField.getAttribute("type") === "password" ? "text" : "password";
+//      passwordField.setAttribute("type", type);
 
-     // Alterna entre os ícones de olho
-     const toggleIcon = document.getElementById("toggleIcon");
-     toggleIcon.classList.toggle("mdi-eye-outline");
-     toggleIcon.classList.toggle("mdi-eye-off-outline");
-   });
+//      // Alterna entre os ícones de olho
+//      const toggleIcon = document.getElementById("toggleIcon");
+//      toggleIcon.classList.toggle("mdi-eye-outline");
+//      toggleIcon.classList.toggle("mdi-eye-off-outline");
+//    });
 
-});
+// });

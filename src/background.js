@@ -20,5 +20,11 @@ const injectHTML = (tabId, htmlPath) => {
 
 // Adicionando um ouvinte de evento para o clique na extensão
 chrome.action.onClicked.addListener((tab) => {
-  injectHTML(tab.id, "src/pages/index.html", "src/main.js");
+    injectHTML(tab.id, "src/pages/index.html");
+    chrome.scripting
+      .executeScript({
+        target: { tabId: tab.id },
+        files: ["src/main.js"],
+      })
+      .then(() => console.log("script injected"));
 });
