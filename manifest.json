@@ -20,6 +20,14 @@
         "38": "icon38.png"
       },
       "default_title": "Open Phone MeetaOne"
-    }
+    },
+    "content_scripts": [
+      {
+        "js": [
+          "src/main.js"
+        ],
+        "matches": ["https://meetaone.com.br/*"]
+      }
+    ]
   }
   
