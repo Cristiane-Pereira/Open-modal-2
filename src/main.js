@@ -1,6 +1,4 @@
 // main.js
-alert("Testando....")
-
 document.addEventListener("DOMContentLoaded", function () { 
     const buttons = document.querySelectorAll(".phone-keyboard-button");
     const input = document.getElementById("agent-call-number");
